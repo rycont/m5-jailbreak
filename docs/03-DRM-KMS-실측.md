@@ -45,7 +45,7 @@ ARM32 기준 `_IOWR` 계산 결과입니다. 여기서 한 번 크게 틀렸기 
 
 ### vblank 이벤트의 `crtc_id=0`
 
-ndp는 page-flip 이벤트에 `crtc_id=0`을 넣습니다. wlroots 0.18은 CRTC id 20을 기대하므로 이벤트를 매칭하지 못해 프레임이 멈춥니다. shim이 이벤트를 읽어 20으로 바꿔 넘깁니다([04](04-네이티브-Sway.md)).
+ndp는 page-flip 이벤트에 `crtc_id=0`을 넣습니다. wlroots 0.18은 CRTC id 20을 기대하므로 이벤트를 매칭하지 못해 프레임이 멈춥니다. shim이 이벤트를 읽어 20으로 바꿔 넘깁니다([05](05-네이티브-Sway.md)).
 
 ### pending flip이 CRTC를 잡아먹는다
 

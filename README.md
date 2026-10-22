@@ -26,6 +26,7 @@
 
 ## 현재 되는 것
 
+- SDB 패키지명 인젝션으로 `sdk` 셸, `/dev/ntkgpu` cred 패치로 **root**, dropbear로 **SSH 2222**
 - 네이티브 Sway 1.10.1 / wlroots 0.18.2가 M5 패널에 **직접 스캔아웃** (미러·캡처 루프 없음)
 - 1920x1080@60, `WLR_RENDERER=pixman`, legacy DRM
 - foot(왼쪽) + KCalc(오른쪽) 동시 표시, 라이브 갱신 확인
@@ -45,13 +46,24 @@
 
 | 문서 | 내용 |
 |---|---|
-| [docs/00-준비.md](docs/00-준비.md) | 백업, SDB/루트 셸, trixie 공간, 안전 수칙 |
-| [docs/01-스택-지도.md](docs/01-스택-지도.md) | E, TBM, `drm-service`, ndp, Wayland 계층 관계 |
-| [docs/02-DRM-KMS-실측.md](docs/02-DRM-KMS-실측.md) | ioctl 실측값, legacy 모드, 함정 모음 |
-| [docs/03-master-탈취.md](docs/03-master-탈취.md) | `SET_MASTER` 우회 3단계와 복원 |
-| [docs/04-네이티브-Sway.md](docs/04-네이티브-Sway.md) | shim 빌드, 환경변수, 실행, 확인 |
-| [docs/05-복구.md](docs/05-복구.md) | 원복, CRTC wedge 탈출, 브릭 방지 |
-| [docs/06-한계와-다음.md](docs/06-한계와-다음.md) | 입력, 가속, 자동화 과제 |
+| [docs/00-준비.md](docs/00-준비.md) | 백업, SDB 접속, trixie 공간, 안전 수칙 |
+| [docs/01-루트와-셸.md](docs/01-루트와-셸.md) | SDB 인젝션 → sdk → cred 패치 → root → UEP → SSH |
+| [docs/02-스택-지도.md](docs/02-스택-지도.md) | E, TBM, `drm-service`, ndp, Wayland 계층 관계 |
+| [docs/03-DRM-KMS-실측.md](docs/03-DRM-KMS-실측.md) | ioctl 실측값, legacy 모드, 함정 모음 |
+| [docs/04-master-탈취.md](docs/04-master-탈취.md) | `SET_MASTER` 우회 3단계와 복원 |
+| [docs/05-네이티브-Sway.md](docs/05-네이티브-Sway.md) | shim 빌드, 환경변수, 실행, 확인 |
+| [docs/06-복구.md](docs/06-복구.md) | 원복, CRTC wedge 탈출, 브릭 방지 |
+| [docs/07-한계와-다음.md](docs/07-한계와-다음.md) | 입력, 가속, 자동화 과제 |
+
+## 사례: root-shell
+
+루트와 셸을 얻는 체인 자체를 도구로 남겼습니다.
+
+- `case-studies/root-shell/tvrun.py` — SDB 패키지명 인젝션(SVE-2025-50109)으로 sdk 명령 실행
+- `case-studies/root-shell/root_helper.cs` — `/dev/ntkgpu` 물리 메모리로 `struct cred` 패치, root TCP 셸, UEP 패치, SSH 설치
+- `case-studies/root-shell/uep_patch.cs` — UEP 판정 함수 탐색/패치
+- `case-studies/root-shell/root_shell.py` — root 셸 클라이언트
+- `case-studies/root-shell/sshd2.sh`, `m5.sh` — dropbear SSH 설치와 재부팅 후 복구
 
 ## 사례: native-sway
 
