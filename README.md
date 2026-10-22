@@ -1,6 +1,6 @@
 # M5 탈옥
 
-삼성 M5 스마트 모니터(Tizen)에서 벤더 스택을 걷어내고 원하는 리눅스 사용자 공간을 올리는 과정을 기록한 저장소입니다. **Sway 올리기는 그 첫 번째 사례**이고, 이 저장소의 본론은 "이 기기에서 무엇이 열려 있고 무엇이 막혀 있는가"입니다.
+삼성 M5 스마트 모니터(Tizen)에서 벤더 스택을 걷어내고 원하는 리눅스 사용자 공간을 올리는 과정을 기록한 저장소입니다. **Sway 올리기와 KDE Plasma 올리기가 그 첫 두 사례**이고, 이 저장소의 본론은 "이 기기에서 무엇이 열려 있고 무엇이 막혀 있는가"입니다.
 
 > 개인 소유 기기에서만 사용하세요. 아래 절차에는 커널 메모리 패치, DRM master 탈취, 부트 스택이 아닌 영역의 수정이 포함됩니다. **부트로더·fstab·파티션은 건드리지 않는 것을 전제**로 합니다.
 
@@ -24,10 +24,20 @@
 
 핵심: **KMS는 껍데기가 아니라 진짜로 돌아갑니다.** 다만 plane이 없어 atomic이 안 되고, 부팅 직후에는 DRM master가 벤더 쪽에 잡혀 있습니다. Sway가 막히는 이유는 KMS 부재가 아니라 **master 소유권 + GBM 부재 + wlroots의 atomic 전제**입니다.
 
+2026-10-23 추가 확인:
+
+| 항목 | 값 |
+|---|---|
+| GP OSD (fb1) | 1920x1080, stride 7680, 8,294,400 B, `shown=1 order=4` |
+| KDE | KWin 6.3.6 / Plasma 6.3.6 (armel), Qt 6.8.2 — `KWIN_COMPOSE=Q` |
+| 패널 리프레시 | 60.112 Hz (fb0 vsync 180회 / 2994.402 ms) |
+| OpenGL 전제 | vendor EGL에 `EGL_KHR_platform_gbm` 없음, `/dev/dri/renderD*` 없음 |
+
 ## 현재 되는 것
 
 - SDB 패키지명 인젝션으로 `sdk` 셸, `/dev/ntkgpu` cred 패치로 **root**, dropbear로 **SSH 2222**
 - 네이티브 Sway 1.10.1 / wlroots 0.18.2가 M5 패널에 **직접 스캔아웃** (미러·캡처 루프 없음)
+- KDE Plasma 6.3.6 데스크톱(KWin 6.3.6 + plasmashell)이 패널에 표시 — **QPainter(CPU) + wl_shm relay 경로**
 - 1920x1080@60, `WLR_RENDERER=pixman`, legacy DRM
 - foot(왼쪽) + KCalc(오른쪽) 동시 표시, 라이브 갱신 확인
 - 부팅 후 master를 되찾는 두 가지 경로 확보
@@ -41,6 +51,8 @@
 - 재부팅하면 벤더가 master를 다시 잡음 → 패치 자동화 필요
 - atomic/page flip 이벤트의 `crtc_id=0` 문제를 shim으로 우회 중 (wlroots 0.18 한계)
 - SoC 3D 가속 미검증 — 현재는 pixman(CPU) 렌더링
+- **KDE Plasma는 KWin OpenGL 장면 초기화 실패** — `EGL_KHR_platform_gbm` 부재·렌더 노드 부재로 QPainter 폴백 중. GPU 직접 렌더 아님
+- KDE 경로의 **KWin FPS 미계측** — 클라이언트 창이 매핑되지 않아 유효 프레임이 없음
 
 ## 문서 지도
 
@@ -54,6 +66,7 @@
 | [docs/05-네이티브-Sway.md](docs/05-네이티브-Sway.md) | shim 빌드, 환경변수, 실행, 확인 |
 | [docs/06-복구.md](docs/06-복구.md) | 원복, CRTC wedge 탈출, 브릭 방지 |
 | [docs/07-한계와-다음.md](docs/07-한계와-다음.md) | 입력, 가속, 자동화 과제 |
+| [docs/08-KDE-Plasma.md](docs/08-KDE-Plasma.md) | KWin + Plasma 6, QPainter/wl_shm 경로와 OpenGL 실패 |
 
 ## 사례: root-shell
 
@@ -76,6 +89,16 @@
 - `case-studies/native-sway/restore.c`, `reset.c` — 원복
 - `case-studies/native-sway/*.c` — 모드 조회, flip 테스트, 캡처 도구
 - `case-studies/native-sway/evidence-native-sway-1342.png` — 패널 실측 캡처
+
+## 사례: kde-plasma
+
+KWin + Plasma 6를 패널에 올린 기록입니다. 셸은 뜨지만 아직 GPU 직접 렌더가 아닙니다.
+
+- `case-studies/kde-plasma/README.md` — 구조, 확인/실패 원문, 재현
+- `case-studies/kde-plasma/scripts/` — relay/KWin/Plasma 기동 스크립트 7개 (⚠️ wayland-9를 지우는 스크립트 주의)
+- `case-studies/kde-plasma/evidence/` — 실제 패널 캡처
+- `case-studies/kde-plasma/checkpoints/` — 08:03 / 08:21 / 08:33 체크포인트
+- `archive/` — 2026-10-22~23 Quill·Turnip 대화 기록 (transcript + raw jsonl)
 
 ## 경고
 
