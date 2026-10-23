@@ -37,7 +37,7 @@
 
 - SDB 패키지명 인젝션으로 `sdk` 셸, `/dev/ntkgpu` cred 패치로 **root**, dropbear로 **SSH 2222**
 - 네이티브 Sway 1.10.1 / wlroots 0.18.2가 M5 패널에 **직접 스캔아웃** (미러·캡처 루프 없음)
-- KDE Plasma 6.3.6 데스크톱(KWin 6.3.6 + plasmashell)이 패널에 표시 — **QPainter(CPU) + wl_shm relay 경로**
+- KDE Plasma 6.3.6 데스크톱(KWin 6.3.6 + plasmashell)이 패널에 **OpenGL(Mali-G51) 전체화면**으로 표시 (2026-10-23)
 - 1920x1080@60, `WLR_RENDERER=pixman`, legacy DRM
 - foot(왼쪽) + KCalc(오른쪽) 동시 표시, 라이브 갱신 확인
 - 부팅 후 master를 되찾는 두 가지 경로 확보
@@ -51,8 +51,8 @@
 - 재부팅하면 벤더가 master를 다시 잡음 → 패치 자동화 필요
 - atomic/page flip 이벤트의 `crtc_id=0` 문제를 shim으로 우회 중 (wlroots 0.18 한계)
 - SoC 3D 가속 미검증 — 현재는 pixman(CPU) 렌더링
-- **KDE Plasma는 KWin OpenGL 장면 초기화 실패** — `EGL_KHR_platform_gbm` 부재·렌더 노드 부재로 QPainter 폴백 중. GPU 직접 렌더 아님
-- KDE 경로의 **KWin FPS 미계측** — 클라이언트 창이 매핑되지 않아 유효 프레임이 없음
+- **KDE 60fps 미달** — OpenGL 전체화면은 성공했지만 18.8 commit/s (present/TBM queue 지연).
+- **재부팅 후 KDE 자동 복구 미완** — `/tmp` 자산을 `/opt/usr/a`로 영속화해야 함.
 
 ## 문서 지도
 
@@ -66,7 +66,8 @@
 | [docs/05-네이티브-Sway.md](docs/05-네이티브-Sway.md) | shim 빌드, 환경변수, 실행, 확인 |
 | [docs/06-복구.md](docs/06-복구.md) | 원복, CRTC wedge 탈출, 브릭 방지 |
 | [docs/07-한계와-다음.md](docs/07-한계와-다음.md) | 입력, 가속, 자동화 과제 |
-| [docs/08-KDE-Plasma.md](docs/08-KDE-Plasma.md) | KWin + Plasma 6, QPainter/wl_shm 경로와 OpenGL 실패 |
+| [docs/08-KDE-Plasma.md](docs/08-KDE-Plasma.md) | KWin + Plasma 6, QPainter/wl_shm 경로 (역사 기록) |
+| [docs/09-KDE-OpenGL-전체화면.md](docs/09-KDE-OpenGL-전체화면.md) | **최신**: KWin OpenGL(Mali-G51) 전체화면, 4분할 원인·수정, 60fps 상태 |
 
 ## 사례: root-shell
 

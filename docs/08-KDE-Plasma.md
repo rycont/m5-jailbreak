@@ -3,6 +3,9 @@
 Sway 다음 사례로, M5 패널에 **KDE Plasma 6.3.6 데스크톱**을 띄웠습니다.
 셸 조건(KWin + Plasma)은 충족했지만, **GPU 직접 렌더와 60fps 실측은 아직 미달**입니다.
 
+> **2026-10-23 19:50 갱신:** KWin OpenGL(Mali-G51) 전체화면에 성공했습니다. 이 문서의 QPainter/OpenGL 실패 내용은 역사적 기록이며, 최신 상태는 [09-KDE-OpenGL-전체화면.md](09-KDE-OpenGL-전체화면.md)입니다.
+
+
 ## 구조
 
 ```
