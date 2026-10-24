@@ -1,5 +1,11 @@
 # KDE direct DRM on the M5 (2026-10-24)
 
+> **CORRECTION 2026-10-24 11:02 KST:** this path was **not OpenGL**.
+> `org.kde.KWin.supportInformation` reported `Compositing Type: QPainter`, and
+> `kwin_direct.log` said `EGL_EXT_platform_base is not supported` /
+> `Could not initialize egl`. QPainter is forbidden on the panel. The start
+> script is now a refusing stub and QPainter was stopped.
+
 This is the first **relay-free** KDE Plasma path on the M5.
 
 - KWin 6.3.6 talks to `/dev/dri/card0` directly.

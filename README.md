@@ -38,10 +38,10 @@
 - SDB 패키지명 인젝션으로 `sdk` 셸, `/dev/ntkgpu` cred 패치로 **root**, dropbear로 **SSH 2222**
 - 네이티브 Sway 1.10.1 / wlroots 0.18.2가 M5 패널에 **직접 스캔아웃** (미러·캡처 루프 없음)
 - KDE Plasma 6.3.6 데스크톱(KWin 6.3.6 + plasmashell)이 패널에 **OpenGL(Mali-G51) 전체화면**으로 표시 (2026-10-23)
-- **2026-10-24: relay 없이 KWin이 `/dev/dri/card0`를 직접 잡고 Plasma를 표시**
-  (`docs/10-KDE-Direct-DRM.md`, 초록 데스크톱 + 하단 패널)
-- **2026-10-24 10:50: 전원 재부팅 후에도 같은 direct KDE가 재현됨**
-  (`case-studies/kde-direct-drm/notes/REPORT_2026-10-24_1050.md`)
+- **2026-10-24: relay 없이 KWin이 `/dev/dri/card0`를 직접 잡음** — 단, KWin은
+  **QPainter 폴백**이었고 OpenGL은 아직 아님. QPainter는 금지라 11:02에 중단.
+  (`docs/10-KDE-Direct-DRM.md`)
+- **2026-10-24 10:50 direct 재부팅 재현은 QPainter 상태였음** — OpenGL 성공 아님.
 - 1920x1080@60, `WLR_RENDERER=pixman`, legacy DRM
 - foot(왼쪽) + KCalc(오른쪽) 동시 표시, 라이브 갱신 확인
 - 부팅 후 master를 되찾는 두 가지 경로 확보
