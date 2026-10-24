@@ -1,0 +1,1 @@
+status=0xA1  relay=ON  buzzer=MUTED  stopwatch=ON

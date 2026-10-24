@@ -1,0 +1,8 @@
+Detected locale "C" with character encoding "ANSI_X3.4-1968", which is not UTF-8.
+Qt depends on a UTF-8 locale, but has failed to switch to one.
+If this causes problems, reconfigure your locale. See the locale(1) manual
+for more information.
+qt.qpa.wayland: There are no outputs - creating placeholder screen
+qt.qpa.wayland: Failed to load client buffer integration: "wayland-egl"
+qt.qpa.wayland: Available client buffer integrations: QList("wayland-egl")
+Could not load a session backend. Session management operations such as shutdown will not be operational. This is a setup issue.

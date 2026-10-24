@@ -1,0 +1,2 @@
+configured=1920x1080 presentation_clock=1 buffers=3 frames=600
+submitted=600 presented=600 discarded=0 frame_callbacks=600 elapsed_ms=10033 presented_fps=59.70 refresh_ns=16666666 missed_vblanks=0

@@ -1,0 +1,29 @@
+[EGLWRAP] wl_display_connect(tbm-drm-auth)=0xb67f4ba0 (ignored for EGL)
+[WLFLAGS] opcode=0 sig=n iface=wl_callback
+[WLFLAGS] ctor ret=0xb67f4db0 nidx=0 nval=0xb67f4db0
+[WLFLAGS] opcode=0 sig=n iface=wl_callback
+[WLFLAGS] ctor ret=0xb67fb330 nidx=0 nval=0xb67fb330
+[GBMSHIM2] create_device(42) tv=wayland-0 -> 0xb67f4028 errno=11
+Detected locale "C" with character encoding "ANSI_X3.4-1968", which is not UTF-8.
+Qt depends on a UTF-8 locale, but has failed to switch to one.
+If this causes problems, reconfigure your locale. See the locale(1) manual
+for more information.
+Accepting client connections on sockets: QList("wayland-4")
+[GBMSHIM2] create_device(28) tv=wayland-0 -> 0xb6815ec0 errno=0
+kwin_wayland_drm: Atomic Mode Setting requested off via environment variable. Using legacy mode on GPU "/dev/dri/card0"
+kwin_wayland_drm: drmModeListLessees() failed: Invalid argument
+kwin_xkbcommon: XKB: /usr/share/X11/locale/en_US.UTF-8/Compose:5116:46: this compose sequence is a duplicate of another; skipping line
+kwin_xkbcommon: XKB: /usr/share/X11/locale/en_US.UTF-8/Compose:5118:48: this compose sequence is a duplicate of another; skipping line
+kwin_xkbcommon: XKB: /usr/share/X11/locale/en_US.UTF-8/Compose:5120:48: this compose sequence is a duplicate of another; skipping line
+kwin_xkbcommon: XKB: /usr/share/X11/locale/en_US.UTF-8/Compose:5124:47: this compose sequence is a duplicate of another; skipping line
+kwin_xkbcommon: XKB: /usr/share/X11/locale/en_US.UTF-8/Compose:5126:46: this compose sequence is a duplicate of another; skipping line
+kwin_xkbcommon: XKB: /usr/share/X11/locale/en_US.UTF-8/Compose:5134:48: this compose sequence is a duplicate of another; skipping line
+kwin_xkbcommon: XKB: /usr/share/X11/locale/en_US.UTF-8/Compose:5138:46: this compose sequence is a duplicate of another; skipping line
+kwin_xkbcommon: XKB: /usr/share/X11/locale/en_US.UTF-8/Compose:5140:46: this compose sequence is a duplicate of another; skipping line
+kwin_xkbcommon: XKB: /usr/share/X11/locale/en_US.UTF-8/Compose:5144:45: this compose sequence is a duplicate of another; skipping line
+kwin_xkbcommon: XKB: /usr/share/X11/locale/en_US.UTF-8/Compose:5147:46: this compose sequence is a duplicate of another; skipping line
+kwin_libinput: Libinput: /usr/share/libinput: failed to find data files
+
+kwin_libinput: Libinput: Failed to load the device quirks from /usr/share/libinput and /etc/libinput/local-overrides.quirks. This will negatively affect device behavior. See https://wayland.freedesktop.org/libinput/doc/1.28.1/device-quirks.html for details.
+
+[EGLWL] GBM -> eglGetDisplay(gbm_device)

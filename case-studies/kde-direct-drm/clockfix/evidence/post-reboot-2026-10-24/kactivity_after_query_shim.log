@@ -1,0 +1,6 @@
+Detected locale "C" with character encoding "ANSI_X3.4-1968", which is not UTF-8.
+Qt depends on a UTF-8 locale, but has failed to switch to one.
+If this causes problems, reconfigure your locale. See the locale(1) manual
+for more information.
+kf.windowsystem: virtual void KX11Extras::connectNotify(const QMetaMethod&) may only be used on X11
+kf.windowsystem: virtual void KX11Extras::connectNotify(const QMetaMethod&) may only be used on X11

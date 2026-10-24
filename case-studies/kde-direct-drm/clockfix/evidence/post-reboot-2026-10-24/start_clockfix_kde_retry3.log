@@ -1,0 +1,15 @@
+python3 absent; using the existing patched /opt/usr/a/lib/libkwin.so.6
+kwin=3372
+plasma=3425
+      string "org.kde.plasmashell"
+      string "org.kde.KWin.HighlightWindow"
+      string "org.kde.KWin"
+      string "org.kde.KWin.NightLight"
+failed to acquire GL context to resolve capabilities, using defaults..
+QPainter::begin: Paint device returned engine == 0, type: 2
+QPainter::setCompositionMode: Painter not active
+QPainter::setRenderHint: Painter must be active to set rendering hints
+QPainter::end: Painter not active, aborted
+[E] pw.loop [loop.c:70 pw_loop_new()] 0xb75d0120: can't make support.system handle: No such file or directory
+kpipewire_logging: "Invalid PipeWire installation. See https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/3296 for more details."
+received error while creating the stream "Invalid PipeWire installation. See https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/3296 for more details." Media monitor will not work.

@@ -1,0 +1,3 @@
+GETCRTC LVDS 1920x1080: clock 148 -> 148500 kHz (KWin view)
+GETCONNECTOR LVDS 1920x1080: clock 148 -> 148500 kHz (KWin view)
+SETCRTC LVDS 1920x1080: passed driver's native clock 148 kHz

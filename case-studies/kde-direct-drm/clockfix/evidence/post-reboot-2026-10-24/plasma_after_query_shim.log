@@ -1,0 +1,156 @@
+Detected locale "C" with character encoding "ANSI_X3.4-1968", which is not UTF-8.
+Qt depends on a UTF-8 locale, but has failed to switch to one.
+If this causes problems, reconfigure your locale. See the locale(1) manual
+for more information.
+qt.qpa.wayland: Failed to load client buffer integration: "wayland-egl"
+qt.qpa.wayland: Available client buffer integrations: QList("wayland-egl")
+Could not load a session backend. Session management operations such as shutdown will not be operational. This is a setup issue.
+kf.kirigami.platform: Failed to find a Kirigami platform plugin for style "Fusion"
+org.kde.plasma.libtaskmanager: The PlasmaWindowManagement protocol hasn't activated in time. The client possibly got denied by kwin? Check kwin output.
+kf.plasma.quick: Applet preload policy set to 1
+file:///opt/usr/a/armel/usr/share/plasma/plasmoids/org.kde.desktopcontainment/contents/ui/main.qml:178:25: QML FolderViewDropArea (parent or ancestor of QQuickLayoutAttached): Binding loop detected for property "minimumWidth":
+file:///opt/usr/a/armel/usr/share/plasma/plasmoids/org.kde.desktopcontainment/contents/ui/main.qml:201:9
+Toolbox not loading, toolbox package is either invalid or disabled.
+QStandardPaths: wrong permissions on runtime directory /run, 0775 instead of 0700
+/opt/usr/a/armel/usr/lib/arm-linux-gnueabi/libexec/kf6/kioworker: error while loading shared libraries: libQt6Core.so.6: cannot open shared object file: No such file or directory
+file:///opt/usr/a/armel/usr/share/plasma/plasmoids/org.kde.plasma.kickoff/contents/ui/main.qml:310:13: QML QQuickImage*: Cannot open: file:///opt/usr/a/armel/usr/share/plasma/plasmoids/org.kde.plasma.kickoff/contents/ui/start-here-kde-symbolic
+org.kde.plasma.kicker: Entry is not valid "preferred://browser" 0xb75a5570
+org.kde.plasma.kicker: Entry is not valid "org.kde.kontact.desktop" 0xb75a5570
+org.kde.plasma.kicker: Entry is not valid "systemsettings.desktop" 0xb75a5570
+org.kde.plasma.kicker: Entry is not valid "org.kde.dolphin.desktop" 0xb75a5570
+org.kde.plasma.kicker: Entry is not valid "org.kde.discover.desktop" 0xb75a5570
+org.kde.plasma.kicker: Entry is not valid "preferred://browser" 0xb75a5570
+org.kde.plasma.kicker: Entry is not valid "org.kde.kontact.desktop" 0xb75a5570
+org.kde.plasma.kicker: Entry is not valid "systemsettings.desktop" 0xb75a5570
+org.kde.plasma.kicker: Entry is not valid "org.kde.dolphin.desktop" 0xb75a5570
+org.kde.plasma.kicker: Entry is not valid "org.kde.discover.desktop" 0xb75a5570
+[E] pw.loop [loop.c:70 pw_loop_new()] 0xb76c7a98: can't make support.system handle: No such file or directory
+kpipewire_logging: "Invalid PipeWire installation. See https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/3296 for more details."
+received error while creating the stream "Invalid PipeWire installation. See https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/3296 for more details." Media monitor will not work.
+kf.solid.backends.udisks2: Failed enumerating UDisks2 objects: "org.freedesktop.DBus.Error.Disconnected" 
+ "Not connected to D-Bus server"
+kf.solid.backends.udisks2: Failed enumerating UDisks2 objects: "org.freedesktop.DBus.Error.Disconnected" 
+ "Not connected to D-Bus server"
+kf.solid.backends.udisks2: Failed enumerating UDisks2 objects: "org.freedesktop.DBus.Error.Disconnected" 
+ "Not connected to D-Bus server"
+kf.solid.backends.udisks2: Failed enumerating UDisks2 objects: "org.freedesktop.DBus.Error.Disconnected" 
+ "Not connected to D-Bus server"
+kf.solid.backends.udisks2: Failed enumerating UDisks2 objects: "org.freedesktop.DBus.Error.Disconnected" 
+ "Not connected to D-Bus server"
+kf.solid.backends.udisks2: Failed enumerating UDisks2 objects: "org.freedesktop.DBus.Error.Disconnected" 
+ "Not connected to D-Bus server"
+kf.solid.backends.udisks2: Failed enumerating UDisks2 objects: "org.freedesktop.DBus.Error.Disconnected" 
+ "Not connected to D-Bus server"
+kf.solid.backends.udisks2: Failed enumerating UDisks2 objects: "org.freedesktop.DBus.Error.Disconnected" 
+ "Not connected to D-Bus server"
+kf.solid.backends.udisks2: Failed enumerating UDisks2 objects: "org.freedesktop.DBus.Error.Disconnected" 
+ "Not connected to D-Bus server"
+kf.solid.backends.udisks2: Failed enumerating UDisks2 objects: "org.freedesktop.DBus.Error.Disconnected" 
+ "Not connected to D-Bus server"
+file:///opt/usr/a/armel/usr/share/plasma/plasmoids/org.kde.plasma.notifications/contents/ui/global/PulseAudio.qml:9:1: Cannot load library /opt/usr/a/armel/usr/lib/arm-linux-gnueabi/qt6/qml/org/kde/plasma/private/volume/libplasma-volume-declarative.so: libpulsecommon-17.0.so: cannot open shared object file: No such file or directory
+QQmlComponent: Component is not ready
+kf.plasma.quick: error when loading applet "org.kde.plasma.volume" QList("file:///opt/usr/a/armel/usr/share/plasma/plasmoids/org.kde.plasma.volume/contents/ui/main.qml:21:1: Cannot load library /opt/usr/a/armel/usr/lib/arm-linux-gnueabi/qt6/qml/org/kde/plasma/private/volume/libplasma-volume-declarative.so: libpulsecommon-17.0.so: cannot open shared object file: No such file or directory")
+kf.solid.backends.udisks2: Failed enumerating UDisks2 objects: "org.freedesktop.DBus.Error.Disconnected" 
+ "Not connected to D-Bus server"
+kf.solid.backends.udisks2: Failed enumerating UDisks2 objects: "org.freedesktop.DBus.Error.Disconnected" 
+ "Not connected to D-Bus server"
+kf.solid.backends.udisks2: Failed enumerating UDisks2 objects: "org.freedesktop.DBus.Error.Disconnected" 
+ "Not connected to D-Bus server"
+kf.solid.backends.udisks2: Failed enumerating UDisks2 objects: "org.freedesktop.DBus.Error.Disconnected" 
+ "Not connected to D-Bus server"
+kf.solid.backends.udisks2: Failed enumerating UDisks2 objects: "org.freedesktop.DBus.Error.Disconnected" 
+ "Not connected to D-Bus server"
+kf.solid.backends.udisks2: Failed enumerating UDisks2 objects: "org.freedesktop.DBus.Error.Disconnected" 
+ "Not connected to D-Bus server"
+kf.solid.backends.udisks2: Failed enumerating UDisks2 objects: "org.freedesktop.DBus.Error.Disconnected" 
+ "Not connected to D-Bus server"
+kf.solid.backends.udisks2: Failed enumerating UDisks2 objects: "org.freedesktop.DBus.Error.Disconnected" 
+ "Not connected to D-Bus server"
+kf.solid.backends.udisks2: Failed enumerating UDisks2 objects: "org.freedesktop.DBus.Error.Disconnected" 
+ "Not connected to D-Bus server"
+kf.solid.backends.udisks2: Failed enumerating UDisks2 objects: "org.freedesktop.DBus.Error.Disconnected" 
+ "Not connected to D-Bus server"
+kf.solid.backends.udisks2: Failed enumerating UDisks2 objects: "org.freedesktop.DBus.Error.Disconnected" 
+ "Not connected to D-Bus server"
+kf.solid.backends.udisks2: Failed enumerating UDisks2 objects: "org.freedesktop.DBus.Error.Disconnected" 
+ "Not connected to D-Bus server"
+kf.solid.backends.udisks2: Failed enumerating UDisks2 objects: "org.freedesktop.DBus.Error.Disconnected" 
+ "Not connected to D-Bus server"
+kf.solid.backends.udisks2: Failed enumerating UDisks2 objects: "org.freedesktop.DBus.Error.Disconnected" 
+ "Not connected to D-Bus server"
+kf.solid.backends.udisks2: Failed enumerating UDisks2 objects: "org.freedesktop.DBus.Error.Disconnected" 
+ "Not connected to D-Bus server"
+kf.solid.backends.udisks2: Failed enumerating UDisks2 objects: "org.freedesktop.DBus.Error.Disconnected" 
+ "Not connected to D-Bus server"
+kf.solid.backends.udisks2: Failed enumerating UDisks2 objects: "org.freedesktop.DBus.Error.Disconnected" 
+ "Not connected to D-Bus server"
+kf.solid.backends.udisks2: Failed enumerating UDisks2 objects: "org.freedesktop.DBus.Error.Disconnected" 
+ "Not connected to D-Bus server"
+kf.solid.backends.udisks2: Failed enumerating UDisks2 objects: "org.freedesktop.DBus.Error.Disconnected" 
+ "Not connected to D-Bus server"
+kf.solid.backends.udisks2: Failed enumerating UDisks2 objects: "org.freedesktop.DBus.Error.Disconnected" 
+ "Not connected to D-Bus server"
+kf.solid.backends.udisks2: Failed enumerating UDisks2 objects: "org.freedesktop.DBus.Error.Disconnected" 
+ "Not connected to D-Bus server"
+kf.solid.backends.udisks2: Failed enumerating UDisks2 objects: "org.freedesktop.DBus.Error.Disconnected" 
+ "Not connected to D-Bus server"
+kf.solid.backends.udisks2: Failed enumerating UDisks2 objects: "org.freedesktop.DBus.Error.Disconnected" 
+ "Not connected to D-Bus server"
+kf.solid.backends.udisks2: Failed enumerating UDisks2 objects: "org.freedesktop.DBus.Error.Disconnected" 
+ "Not connected to D-Bus server"
+failed to acquire GL context to resolve capabilities, using defaults..
+QPainter::begin: Paint device returned engine == 0, type: 2
+QPainter::setCompositionMode: Painter not active
+QPainter::setRenderHint: Painter must be active to set rendering hints
+QPainter::end: Painter not active, aborted
+[E] pw.loop [loop.c:70 pw_loop_new()] 0xb75d0120: can't make support.system handle: No such file or directory
+kpipewire_logging: "Invalid PipeWire installation. See https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/3296 for more details."
+received error while creating the stream "Invalid PipeWire installation. See https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/3296 for more details." Media monitor will not work.
+[E] pw.loop [loop.c:70 pw_loop_new()] 0xb7ec25e0: can't make support.system handle: No such file or directory
+kpipewire_logging: "Invalid PipeWire installation. See https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/3296 for more details."
+received error while creating the stream "Invalid PipeWire installation. See https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/3296 for more details." Media monitor will not work.
+[E] pw.loop [loop.c:70 pw_loop_new()] 0xb83c6748: can't make support.system handle: No such file or directory
+kpipewire_logging: "Invalid PipeWire installation. See https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/3296 for more details."
+received error while creating the stream "Invalid PipeWire installation. See https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/3296 for more details." Media monitor will not work.
+[E] pw.loop [loop.c:70 pw_loop_new()] 0xb7a38da8: can't make support.system handle: No such file or directory
+kpipewire_logging: "Invalid PipeWire installation. See https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/3296 for more details."
+received error while creating the stream "Invalid PipeWire installation. See https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/3296 for more details." Media monitor will not work.
+[E] pw.loop [loop.c:70 pw_loop_new()] 0xb7a32e98: can't make support.system handle: No such file or directory
+kpipewire_logging: "Invalid PipeWire installation. See https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/3296 for more details."
+received error while creating the stream "Invalid PipeWire installation. See https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/3296 for more details." Media monitor will not work.
+[E] pw.loop [loop.c:70 pw_loop_new()] 0xb855d0f8: can't make support.system handle: No such file or directory
+kpipewire_logging: "Invalid PipeWire installation. See https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/3296 for more details."
+received error while creating the stream "Invalid PipeWire installation. See https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/3296 for more details." Media monitor will not work.
+[E] pw.loop [loop.c:70 pw_loop_new()] 0xb8285338: can't make support.system handle: No such file or directory
+kpipewire_logging: "Invalid PipeWire installation. See https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/3296 for more details."
+received error while creating the stream "Invalid PipeWire installation. See https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/3296 for more details." Media monitor will not work.
+[E] pw.loop [loop.c:70 pw_loop_new()] 0xb855d7e8: can't make support.system handle: No such file or directory
+kpipewire_logging: "Invalid PipeWire installation. See https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/3296 for more details."
+received error while creating the stream "Invalid PipeWire installation. See https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/3296 for more details." Media monitor will not work.
+[E] pw.loop [loop.c:70 pw_loop_new()] 0xb82c43d0: can't make support.system handle: No such file or directory
+kpipewire_logging: "Invalid PipeWire installation. See https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/3296 for more details."
+received error while creating the stream "Invalid PipeWire installation. See https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/3296 for more details." Media monitor will not work.
+[E] pw.loop [loop.c:70 pw_loop_new()] 0xb7e94ff0: can't make support.system handle: No such file or directory
+kpipewire_logging: "Invalid PipeWire installation. See https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/3296 for more details."
+received error while creating the stream "Invalid PipeWire installation. See https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/3296 for more details." Media monitor will not work.
+[E] pw.loop [loop.c:70 pw_loop_new()] 0xb7444570: can't make support.system handle: No such file or directory
+kpipewire_logging: "Invalid PipeWire installation. See https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/3296 for more details."
+received error while creating the stream "Invalid PipeWire installation. See https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/3296 for more details." Media monitor will not work.
+[E] pw.loop [loop.c:70 pw_loop_new()] 0xb7a3bcf0: can't make support.system handle: No such file or directory
+kpipewire_logging: "Invalid PipeWire installation. See https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/3296 for more details."
+received error while creating the stream "Invalid PipeWire installation. See https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/3296 for more details." Media monitor will not work.
+[E] pw.loop [loop.c:70 pw_loop_new()] 0xb82c8dc0: can't make support.system handle: No such file or directory
+kpipewire_logging: "Invalid PipeWire installation. See https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/3296 for more details."
+received error while creating the stream "Invalid PipeWire installation. See https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/3296 for more details." Media monitor will not work.
+[E] pw.loop [loop.c:70 pw_loop_new()] 0xb82301c8: can't make support.system handle: No such file or directory
+kpipewire_logging: "Invalid PipeWire installation. See https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/3296 for more details."
+received error while creating the stream "Invalid PipeWire installation. See https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/3296 for more details." Media monitor will not work.
+[E] pw.loop [loop.c:70 pw_loop_new()] 0xb7a499e8: can't make support.system handle: No such file or directory
+kpipewire_logging: "Invalid PipeWire installation. See https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/3296 for more details."
+received error while creating the stream "Invalid PipeWire installation. See https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/3296 for more details." Media monitor will not work.
+[E] pw.loop [loop.c:70 pw_loop_new()] 0xb8259c98: can't make support.system handle: No such file or directory
+kpipewire_logging: "Invalid PipeWire installation. See https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/3296 for more details."
+received error while creating the stream "Invalid PipeWire installation. See https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/3296 for more details." Media monitor will not work.
+[E] pw.loop [loop.c:70 pw_loop_new()] 0xb7a1eb80: can't make support.system handle: No such file or directory
+kpipewire_logging: "Invalid PipeWire installation. See https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/3296 for more details."
+received error while creating the stream "Invalid PipeWire installation. See https://gitlab.freedesktop.org/pipewire/pipewire/-/issues/3296 for more details." Media monitor will not work.

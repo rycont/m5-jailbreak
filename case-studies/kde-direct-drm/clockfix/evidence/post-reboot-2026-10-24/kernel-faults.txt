@@ -1,0 +1,26 @@
+[ 1024.799636] [kpi_fault_info] [k] 3 -> write function call
+[ 1024.799642] [kpi_fault_info] [k] 3 -> p:0xe92d4800 l:0xb5bf628c th:ld-linux.so.3 pro:ld-linux.so.3 ty:SIGSEGV pgid:3007
+[ 1024.799656] [kpi_fault_info] [k] No VMA for ADDR PC
+[ 1024.799663] [kpi_fault_info] [k] exe d_path : [/opt/usr/a/armel/usr/lib/arm-linux-gnueabi/ld-linux.so.3]
+[ 1024.799671] [kpi_fault_info] [k] LR Start: 0xb5970000 Offset: 0x0028628c
+[ 1024.799693] [kpi_fault_info] [K] start time:1023913637922, end time:1024796043321
+[ 1045.305196] [kpi_fault_info] [k] 4 -> write function call
+[ 1045.305203] [kpi_fault_info] [k] 4 -> p:0xb4cc4120 l:0xb4cc4114 th:ld-linux.so.3 pro:ld-linux.so.3 ty:SIGABRT pgid:3025
+[ 1045.305214] [kpi_fault_info] [k] PC Start: 0xb4c40000 Offset: 0x00084120
+[ 1045.305222] [kpi_fault_info] [k] d_path : [/opt/usr/a/armel/usr/lib/arm-linux-gnueabi/libc.so.6]
+[ 1045.305230] [kpi_fault_info] [k] exe d_path : [/opt/usr/a/armel/usr/lib/arm-linux-gnueabi/ld-linux.so.3]
+[ 1045.305239] [kpi_fault_info] [k] LR Start: 0xb4c40000 Offset: 0x00084114
+[ 1045.305266] [kpi_fault_info] [K] start time:1024922752088, end time:1045301599195
+[ 1045.367538] [kpi_fault_info] [k] 5 -> write function call
+[ 1045.367545] [kpi_fault_info] [k] 5 -> p:0xb3714120 l:0xb3714114 th:ld-linux.so.3 pro:ld-linux.so.3 ty:SIGABRT pgid:3039
+[ 1045.367557] [kpi_fault_info] [k] PC Start: 0xb3690000 Offset: 0x00084120
+[ 1045.367564] [kpi_fault_info] [k] d_path : [/opt/usr/a/armel/usr/lib/arm-linux-gnueabi/libc.so.6]
+[ 1045.367572] [kpi_fault_info] [k] exe d_path : [/opt/usr/a/armel/usr/lib/arm-linux-gnueabi/ld-linux.so.3]
+[ 1045.367581] [kpi_fault_info] [k] LR Start: 0xb3690000 Offset: 0x00084114
+[ 1045.367606] [kpi_fault_info] [K] start time:1026925410671, end time:1045363941429
+[ 1275.732059] [kpi_fault_info] [k] 6 -> write function call
+[ 1275.732066] [kpi_fault_info] [k] 6 -> p:0xe92d4800 l:0xb5c2628c th:ld-linux.so.3 pro:ld-linux.so.3 ty:SIGSEGV pgid:3993
+[ 1275.732079] [kpi_fault_info] [k] No VMA for ADDR PC
+[ 1275.732086] [kpi_fault_info] [k] exe d_path : [/opt/usr/a/armel/usr/lib/arm-linux-gnueabi/ld-linux.so.3]
+[ 1275.732095] [kpi_fault_info] [k] LR Start: 0xb59a0000 Offset: 0x0028628c
+[ 1275.732116] [kpi_fault_info] [K] start time:1274769923695, end time:1275728403754

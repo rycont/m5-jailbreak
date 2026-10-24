@@ -1,0 +1,4 @@
+Sat Oct 24 21:35:45 KST 2026
+ 21:35:45 up 25 min,  0 users,  load average: 30.18, 28.68, 23.42
+srwxrwxr-x 1 root display 0 Jan  1  1970 /run/wayland-0
+srwxrwxrwx 1 root root    0 Oct 24 21:34 /run/wayland-4

@@ -1,0 +1,19 @@
+Sat Oct 24 21:53:38 KST 2026
+ 21:53:38 up 43 min,  0 users,  load average: 27.86, 27.92, 26.49
+ PID STAT     ELAPSED COMMAND
+3372 Ssl        01:36 /opt/usr/a/armel/lib/ld-linux.so.3 --library-path /opt/usr/a/m5kde/direct:/opt/usr/a/lib:/tmp/kwinwl:/tmp/vgles:/tmp/eglw2:/tmp/kstubs:/opt/usr/a/armel/lib:/opt/usr/a/armel/usr/lib/arm-linux-gnueabi:/opt/usr/a/armel/usr/lib:/usr/lib /opt/usr/a/armel/usr/bin/kwin_wayland --drm --no-lockscreen --no-kactivities --socket wayland-4 kwin
+3425 Ssl        01:33 /opt/usr/a/armel/lib/ld-linux.so.3 --library-path /tmp/wltest4:/tmp/kwinwl:/opt/usr/a/m5kde/direct:/opt/usr/a/lib:/tmp/vgles:/tmp/eglw2:/tmp/kstubs:/tmp/stubs:/opt/usr/a/armel/lib:/opt/usr/a/armel/usr/lib/arm-linux-gnueabi:/opt/usr/a/armel/usr/lib:/usr/lib /opt/usr/a/armel/usr/bin/plasmashell
+interactiveWindowMoveEnabled: true
+Number of Screens: 1
+Screen 0:
+Name: LVDS-1
+Enabled: 1
+Geometry: 0,0,1920x1080
+Compositing is active
+OpenGL renderer string: Mali-G51
+OpenGL version string: OpenGL ES 3.2 r11p0-01rel0.git_rev_unknown.git_date_unknown
+      string "org.kde.ActivityManager"
+      string "org.kde.plasmashell"
+      string "org.kde.KWin.HighlightWindow"
+      string "org.kde.KWin"
+      string "org.kde.KWin.NightLight"

@@ -1,0 +1,17 @@
+Repository copies (SHA-256):
+75b0d037e42dcb89e33d408a608c1592c46e6163b2b0617f7388cbcd711e5e0f  case-studies/kde-direct-drm/clockfix/scripts/start_clockfix_kde.sh
+fcccda5bd2bad8e63485ba52000b82ad3ffc1c93484dc1e1df78be20fb724b5b  case-studies/kde-direct-drm/clockfix/scripts/reproduce_1080p60.sh
+2b84e13c3afdaae20937156687d711635161ebcecebc4c8bcb137d96c9ec2692  case-studies/kde-direct-drm/clockfix/scripts/apply_libkwin_patch.py
+fced8a557a3d56300cbca09bebfa63e119472f3fb479746bc541570e33c13561  case-studies/kde-direct-drm/clockfix/bin/epoxy_dispatch_objects.so
+bd07f14e7090b1a6d58e08f389dcbdc9e305b2840ade3ba95333a2eb9b356852  case-studies/kde-direct-drm/clockfix/bin/wlshim_plasma_redirect_nolog.so
+db8a9c7ad631a1a453edbc743f843ca338b6664886861cf1dea4a6289dc53dd4  case-studies/kde-direct-drm/clockfix/bin/libwayland_client_real.so.1
+c89989c7e07d684bd404f80ebe57067f026d2af9bece3537aaa62e0a115ed73c  case-studies/kde-direct-drm/clockfix/bin/fps_present_1920
+
+M5 persistent copies (SHA-256):
+75b0d037e42dcb89e33d408a608c1592c46e6163b2b0617f7388cbcd711e5e0f  /opt/usr/a/m5kde/direct/start_clockfix_kde.sh
+fcccda5bd2bad8e63485ba52000b82ad3ffc1c93484dc1e1df78be20fb724b5b  /opt/usr/a/m5kde/direct/reproduce_1080p60.sh
+2b84e13c3afdaae20937156687d711635161ebcecebc4c8bcb137d96c9ec2692  /opt/usr/a/m5kde/direct/apply_libkwin_patch.py
+fced8a557a3d56300cbca09bebfa63e119472f3fb479746bc541570e33c13561  /opt/usr/a/m5kde/direct/epoxy_dispatch_objects.so
+bd07f14e7090b1a6d58e08f389dcbdc9e305b2840ade3ba95333a2eb9b356852  /opt/usr/a/m5kde/direct/wlshim_plasma_redirect_nolog.so
+db8a9c7ad631a1a453edbc743f843ca338b6664886861cf1dea4a6289dc53dd4  /opt/usr/a/m5kde/direct/libwayland_client_real.so.1
+c89989c7e07d684bd404f80ebe57067f026d2af9bece3537aaa62e0a115ed73c  /opt/usr/a/m5kde/direct/fps_present_1920

@@ -1,0 +1,18 @@
+[ 1045.367545] [kpi_fault_info] [k] 5 -> p:0xb3714120 l:0xb3714114 th:ld-linux.so.3 pro:ld-linux.so.3 ty:SIGABRT pgid:3039
+[ 1045.367557] [kpi_fault_info] [k] PC Start: 0xb3690000 Offset: 0x00084120
+[ 1045.367564] [kpi_fault_info] [k] d_path : [/opt/usr/a/armel/usr/lib/arm-linux-gnueabi/libc.so.6]
+[ 1045.367572] [kpi_fault_info] [k] exe d_path : [/opt/usr/a/armel/usr/lib/arm-linux-gnueabi/ld-linux.so.3]
+[ 1045.367581] [kpi_fault_info] [k] LR Start: 0xb3690000 Offset: 0x00084114
+[ 1045.367606] [kpi_fault_info] [K] start time:1026925410671, end time:1045363941429
+[ 1275.732059] [kpi_fault_info] [k] 6 -> write function call
+[ 1275.732066] [kpi_fault_info] [k] 6 -> p:0xe92d4800 l:0xb5c2628c th:ld-linux.so.3 pro:ld-linux.so.3 ty:SIGSEGV pgid:3993
+[ 1275.732079] [kpi_fault_info] [k] No VMA for ADDR PC
+[ 1275.732086] [kpi_fault_info] [k] exe d_path : [/opt/usr/a/armel/usr/lib/arm-linux-gnueabi/ld-linux.so.3]
+[ 1275.732095] [kpi_fault_info] [k] LR Start: 0xb59a0000 Offset: 0x0028628c
+[ 1275.732116] [kpi_fault_info] [K] start time:1274769923695, end time:1275728403754
+[ 1478.922433] [kpi_fault_info] [k] 7 -> write function call
+[ 1478.922440] [kpi_fault_info] [k] 7 -> p:0xe92d4800 l:0xb5c9628c th:ld-linux.so.3 pro:ld-linux.so.3 ty:SIGSEGV pgid:1720
+[ 1478.922453] [kpi_fault_info] [k] No VMA for ADDR PC
+[ 1478.922460] [kpi_fault_info] [k] exe d_path : [/opt/usr/a/armel/usr/lib/arm-linux-gnueabi/ld-linux.so.3]
+[ 1478.922468] [kpi_fault_info] [k] LR Start: 0xb5a10000 Offset: 0x0028628c
+[ 1478.922491] [kpi_fault_info] [K] start time:1478098574397, end time:1478918726874

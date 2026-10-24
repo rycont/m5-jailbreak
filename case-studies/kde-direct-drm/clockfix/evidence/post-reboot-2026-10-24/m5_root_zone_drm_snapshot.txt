@@ -1,0 +1,39 @@
+Read-only root-zone snapshot; this /proc view is not global across Tizen Zones.
+Sat Oct 24 22:05:24 KST 2026
+
+E process names visible from this zone:
+none visible here; this does not establish E absence in another Zone
+
+Processes with /dev/dri/card0 fd targets (symlink scan only):
+3372 /dev/dri/card0
+3372 /dev/dri/card0
+3372 /dev/dri/card0
+3372 /dev/dri/card0
+
+KWin/Plasma processes:
+ PID PPID     ELAPSED COMMAND
+3372    1       13:23 /opt/usr/a/armel/lib/ld-linux.so.3 --library-path /opt/usr/a/m5kde/direct:/opt/usr/a/lib:/tmp/kwinwl:/tmp/vgles:/tmp/eglw2:/tmp/kstubs:/opt/usr/a/armel/lib:/opt/usr/a/armel/usr/lib/arm-linux-gnueabi:/opt/usr/a/armel/usr/lib:/usr/lib /opt/usr/a/armel/usr/bin/kwin_wayland --drm --no-lockscreen --no-kactivities --socket wayland-4 kwin
+3425    1       13:20 /opt/usr/a/armel/lib/ld-linux.so.3 --library-path /tmp/wltest4:/tmp/kwinwl:/opt/usr/a/m5kde/direct:/opt/usr/a/lib:/tmp/vgles:/tmp/eglw2:/tmp/kstubs:/tmp/stubs:/opt/usr/a/armel/lib:/opt/usr/a/armel/usr/lib/arm-linux-gnueabi:/opt/usr/a/armel/usr/lib:/usr/lib /opt/usr/a/armel/usr/bin/plasmashell
+
+KWin support excerpt:
+Screen 0:
+Name: LVDS-1
+Enabled: 1
+Geometry: 0,0,1920x1080
+Refresh Rate: 60000
+Compositing is active
+OpenGL renderer string: Mali-G51
+OpenGL version string: OpenGL ES 3.2 r11p0-01rel0.git_rev_unknown.git_date_unknown
+
+KWin DRM backend log excerpt:
+kwin_wayland_drm: Atomic Mode Setting requested off via environment variable. Using legacy mode on GPU "/dev/dri/card0"
+[EGLWL] GBM -> eglGetDisplay(gbm_device)
+[EGLWRAP] dma import w=1920 h=1080 fourcc=0x34325258 pitch=7680 fd=45
+[EGLWRAP] TBM surf=0xb6a3fc98 img=0xb68d0550
+[EGLWRAP] dma import w=1920 h=1080 fourcc=0x34325258 pitch=7680 fd=53
+[EGLWRAP] TBM surf=0xb6b908e0 img=0xb68d0e08
+
+DRM debugfs clients availability:
+/sys/kernel/debug/dri/0/clients unavailable
+
+No DRM master ioctl was issued by this diagnostic snapshot.

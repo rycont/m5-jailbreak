@@ -1,0 +1,29 @@
+ELF symbol-type evidence captured locally after the M5 reboot replay.
+KWin Build ID:
+    Build ID: ba4770b6b33dfbf42b13a5fc21dd75eefe44a377
+
+KWin undefined symbol table:
+  1007: 00000000     0 OBJECT  GLOBAL DEFAULT  UND epoxy_eglQueryDisplayAttribEXT
+  1599: 00000000     0 OBJECT  GLOBAL DEFAULT  UND epoxy_eglGetProcAddress
+  1856: 00000000     0 OBJECT  GLOBAL DEFAULT  UND epoxy_eglQueryDeviceStringEXT
+  2561: 00000000     0 OBJECT  GLOBAL DEFAULT  UND epoxy_eglQueryString
+
+Previous function-symbol shim (epoxy_func2_m5.so):
+37a416425667158047f64b3199e77bf5f41d08cb88bcba2c231f91368cb9558b  /tmp/epoxy_func2_m5.so
+     3: 000104a0   932 FUNC    GLOBAL DEFAULT    8 epoxy_eglQueryString
+     4: 000108c4   100 FUNC    GLOBAL DEFAULT    8 epoxy_eglQueryDisplayAttribEXT
+     5: 00010928   128 FUNC    GLOBAL DEFAULT    8 epoxy_eglQueryDeviceStringEXT
+    18: 000104a0   932 FUNC    GLOBAL DEFAULT    8 epoxy_eglQueryString
+    21: 000108c4   100 FUNC    GLOBAL DEFAULT    8 epoxy_eglQueryDisplayAttribEXT
+    22: 00010928   128 FUNC    GLOBAL DEFAULT    8 epoxy_eglQueryDeviceStringEXT
+
+Corrected object-symbol shim:
+fced8a557a3d56300cbca09bebfa63e119472f3fb479746bc541570e33c13561  case-studies/kde-direct-drm/clockfix/bin/epoxy_dispatch_objects.so
+     6: 00030f0c     4 OBJECT  GLOBAL DEFAULT   14 epoxy_eglQueryString
+     7: 00030f10     4 OBJECT  GLOBAL DEFAULT   14 epoxy_eglQueryDisplayAttribEXT
+     8: 00030f14     4 OBJECT  GLOBAL DEFAULT   14 epoxy_eglQueryDeviceStringEXT
+     9: 00030f18     4 OBJECT  GLOBAL DEFAULT   14 epoxy_eglGetProcAddress
+    42: 00030f0c     4 OBJECT  GLOBAL DEFAULT   14 epoxy_eglQueryString
+    43: 00030f10     4 OBJECT  GLOBAL DEFAULT   14 epoxy_eglQueryDisplayAttribEXT
+    44: 00030f14     4 OBJECT  GLOBAL DEFAULT   14 epoxy_eglQueryDeviceStringEXT
+    45: 00030f18     4 OBJECT  GLOBAL DEFAULT   14 epoxy_eglGetProcAddress
