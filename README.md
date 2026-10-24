@@ -40,6 +40,8 @@
 - KDE Plasma 6.3.6 데스크톱(KWin 6.3.6 + plasmashell)이 패널에 **OpenGL(Mali-G51) 전체화면**으로 표시 (2026-10-23)
 - **2026-10-24: relay 없이 KWin이 `/dev/dri/card0`를 직접 잡고 Plasma를 표시**
   (`docs/10-KDE-Direct-DRM.md`, 초록 데스크톱 + 하단 패널)
+- **2026-10-24 10:50: 전원 재부팅 후에도 같은 direct KDE가 재현됨**
+  (`case-studies/kde-direct-drm/notes/REPORT_2026-10-24_1050.md`)
 - 1920x1080@60, `WLR_RENDERER=pixman`, legacy DRM
 - foot(왼쪽) + KCalc(오른쪽) 동시 표시, 라이브 갱신 확인
 - 부팅 후 master를 되찾는 두 가지 경로 확보
@@ -53,8 +55,8 @@
 - 재부팅하면 벤더가 master를 다시 잡음 → 패치 자동화 필요
 - atomic/page flip 이벤트의 `crtc_id=0` 문제를 shim으로 우회 중 (wlroots 0.18 한계)
 - SoC 3D 가속 미검증 — 현재는 pixman(CPU) 렌더링
-- **KDE 60fps 미달** — OpenGL 전체화면은 성공했지만 18.8 commit/s (present/TBM queue 지연).
-- **재부팅 후 KDE 자동 복구 미완** — `/tmp` 자산을 `/opt/usr/a`로 영속화해야 함.
+- **KDE 60fps 미달** — 18.8 commit/s (relay 기준). direct 경로의 60fps는 미측정.
+- **direct 경로의 `/tmp` 자산은 `/opt/usr/a/m5kde/direct`에서 복원 필요** — 재부팅 재현 스크립트는 있음.
 
 ## 문서 지도
 

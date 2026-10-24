@@ -13,6 +13,9 @@
   `case-studies/kde-direct-drm/evidence/m5-kwin-direct-2026-10-24.png`
 - 캡처 시점: `kwin=3091` (5분 36초 생존), `plasmashell=538` (45초),
   `kactivitymanagerd=521`. relay 없음.
+- **재부팅 재현(10:50)**: 플러그 전원 사이클 → root SSH 복구 →
+  `start_direct_kde.sh` 한 번으로 KWin `2945`, plasmashell `3472` 생존.
+  패널·시계까지 정상. `evidence/m5-kwin-direct-reboot-2026-10-24.png`.
 - D-Bus `ListNames`에 `org.kde.plasmashell` 등록.
 
 ## 막힌 지점과 우회
@@ -119,8 +122,8 @@ DBUS_SESSION_BUS_ADDRESS=unix:path=/tmp/dbus-kde dbus-send --session \
 
 ## 남은 문제
 
-- 패널 내용/시계가 캡처에 보이지 않음; 우측 검은 띠도 미설명.
 - 1920x1080@60 미측정. 이 문서는 **표시 성공**이지 60fps 달성이 아님.
+- 첫 캡처의 우측 검은 띠는 재부팅 후 재현되지 않음(일시 현상으로 기록).
 - 두 패치는 우회다. 특히 `initClientExtensions`는 `eglQueryString` 반환값의
   근본 원인을 아직 고치지 않았다.
 - 재부팅 후 `/tmp`는 비므로 `/opt/usr/a/m5kde/direct`에서 복원해야 한다.

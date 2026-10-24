@@ -5,7 +5,7 @@ This is the first **relay-free** KDE Plasma path on the M5.
 - KWin 6.3.6 talks to `/dev/dri/card0` directly.
 - Plasma 6.3.6 connects to the KWin Wayland socket.
 - No relay process, no nested compositor, no QPainter in the output path.
-- Evidence: `evidence/m5-kwin-direct-2026-10-24.png` (green desktop + bottom panel).
+- Evidence: `evidence/m5-kwin-direct-reboot-2026-10-24.png` (post-reboot, green desktop + bottom panel with clock), and `evidence/m5-kwin-direct-2026-10-24.png` (pre-reboot).
 - KWin and plasmashell stayed alive together for several minutes (`kwin=3091` at 5:36,
   `plasma=538` at 0:45 when the capture was taken).
 
@@ -79,10 +79,13 @@ The start script does the following, in order:
 
 ## Evidence
 
-- `evidence/m5-kwin-direct-2026-10-24.png` — Tizen `dcapture` (720x540 fixed):
-  green desktop and the bottom Plasma panel; right side has a dark strip.
-- `notes/REPORT_2026-10-24_1027.md` — exact PIDs, DBus names, logs, and
-  before/after crash mapping.
+- `evidence/m5-kwin-direct-reboot-2026-10-24.png` — Tizen `dcapture` after a
+  clean reboot: green desktop + bottom panel with clock, full width.
+- `evidence/m5-kwin-direct-2026-10-24.png` — initial pre-reboot capture;
+  green desktop + panel strip with a dark right edge.
+- `notes/REPORT_2026-10-24_1027.md` — first direct run, exact PIDs, DBus names,
+  logs, and before/after crash mapping.
+- `notes/REPORT_2026-10-24_1050.md` — reboot reproduction (PASS).
 - On the device:
   - `/tmp/kwin_direct.log`
   - `/tmp/plasma_direct.log`
@@ -91,9 +94,9 @@ The start script does the following, in order:
 
 ## Known gaps
 
-- The panel content/clock is not visible in this capture; the panel strip is
-  blank. The right edge is a dark strip, not yet explained.
 - 1920x1080@60 has **not** been measured on this direct path.
+- The pre-reboot capture's dark right strip did not appear after the clean
+  reboot; it should be treated as transient until reproduced.
 - The two `bx lr` patches are crash bypasses. A clean fix needs a correct
   `eglQueryString(EGL_NO_DISPLAY, EGL_EXTENSIONS)` result and a real solution
   for the `sendCancel` path.

@@ -30,7 +30,11 @@ cp -a "$D/kstubs/." /tmp/kstubs/ 2>/dev/null
 cp -a "$D/kwinwl/." /tmp/kwinwl/ 2>/dev/null
 cp -f /opt/usr/a/m5kde/libwayland-client.so.0.fix6 /tmp/kwinwl/libwayland-client.so.0 2>/dev/null
 
-python3 "$D/apply_libkwin_patch.py" /opt/usr/a/lib/libkwin.so.6 || exit 1
+if command -v python3 >/dev/null 2>&1; then
+    python3 "$D/apply_libkwin_patch.py" /opt/usr/a/lib/libkwin.so.6 || exit 1
+else
+    echo "python3 absent; using the existing patched /opt/usr/a/lib/libkwin.so.6"
+fi
 
 if [ ! -S /tmp/dbus-kde ]; then
     rm -f /tmp/dbus-kde /tmp/dbus-kde.lock
