@@ -1,0 +1,3 @@
+Read-only status request to 192.168.200.119:5000 failed with OSError: [Errno 113] No route to host.
+Host ARP neighbor: INCOMPLETE; ping returned Destination Host Unreachable.
+No relay write or power toggle was sent in this session.

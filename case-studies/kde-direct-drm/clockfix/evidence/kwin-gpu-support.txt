@@ -1,0 +1,7 @@
+KWin version: 6.3.6
+Compositing is active
+Compositing Type: OpenGL ES 2.0
+OpenGL vendor string: ARM
+OpenGL renderer string: Mali-G51
+OpenGL version string: OpenGL ES 3.2 r11p0-01rel0.git_rev_unknown.git_date_unknown
+OpenGL platform interface: EGL

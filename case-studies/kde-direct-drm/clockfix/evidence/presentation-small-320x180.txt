@@ -1,0 +1,2 @@
+configured=0x0 presentation_clock=1 buffers=3 frames=360
+submitted=360 presented=360 discarded=0 frame_callbacks=360 elapsed_ms=6049 presented_fps=59.34 refresh_ns=16666666 missed_vblanks=0

@@ -6,6 +6,13 @@
 > `Could not initialize egl`. QPainter is forbidden on the panel. The start
 > script is now a refusing stub and QPainter was stopped.
 
+> **LATEST CHECKPOINT 2026-10-24 20:42 KST:** a later direct KWin session
+> reports active OpenGL ES 2.0 on ARM Mali-G51. With a temporary DRM clock
+> normalization shim, a 1920×1080 SHM surface got 600/600 presentation feedbacks
+> at 59.90fps with no missed VSync sequence numbers. The client changed only a
+> small moving bar; full-frame GPU load and reboot persistence remain pending.
+> Details and raw artifacts: [clockfix checkpoint](notes/CHECKPOINT_2026-10-24_CLOCKFIX.md).
+
 This is the first **relay-free** KDE Plasma path on the M5.
 
 - KWin 6.3.6 talks to `/dev/dri/card0` directly.
@@ -100,7 +107,7 @@ The start script does the following, in order:
 
 ## Known gaps
 
-- 1920x1080@60 has **not** been measured on this direct path.
+- A full-screen 1920×1080 surface reached 59.90fps, but the test used SHM and changed only a 128×120 region; full-frame GPU load remains unmeasured.
 - The pre-reboot capture's dark right strip did not appear after the clean
   reboot; it should be treated as transient until reproduced.
 - The two `bx lr` patches are crash bypasses. A clean fix needs a correct

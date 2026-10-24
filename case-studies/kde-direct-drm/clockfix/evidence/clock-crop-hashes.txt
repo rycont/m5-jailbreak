@@ -1,0 +1,9 @@
+Final clean-session 1-second capture run; each clock-area crop hash differs:
+frame_00 69c4802a1b54da74
+frame_01 a4373de8685f4f6d
+frame_02 20497fbfd32d083e
+frame_03 112d3404ca8aac16
+frame_04 8b924b4f4293e260
+frame_05 259c1f04f2cc6958
+frame_06 f282ac699be09a14
+frame_07 a96e8c14cc74e4c6

@@ -1,0 +1,7 @@
+M5 FBIO_WAITFORVSYNC probe; 180 waits per device node.
+
+node=/dev/fb0 waits=180 elapsed=2990.991 ms avg=16.617 ms -> 60.181 Hz
+interval(ms): min=16.458 p10=16.602 median=16.649 p90=16.744 max=16.874 mean=16.666
+
+node=/dev/fb1 waits=180 elapsed=2997.819 ms avg=16.655 ms -> 60.044 Hz
+interval(ms): min=16.394 p10=16.601 median=16.661 p90=16.739 max=16.947 mean=16.666

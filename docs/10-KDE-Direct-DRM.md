@@ -1,5 +1,12 @@
 # 10 · KDE Direct DRM (2026-10-24)
 
+> **Later checkpoint (2026-10-24 20:42 KST):** this document records the earlier
+> 11:02 QPainter state. A later direct DRM session is documented in
+> [the clockfix checkpoint](../case-studies/kde-direct-drm/notes/CHECKPOINT_2026-10-24_CLOCKFIX.md):
+> KWin OpenGL ES 2.0 on Mali-G51 was active, and a full-screen 1920×1080 SHM
+> surface reached 59.90 presentation fps. That client changed only a small bar;
+> full-frame GPU load and reboot persistence are still pending.
+
 > **정정 (2026-10-24 11:02):** 이 경로는 OpenGL이 아니었다.
 > `supportInformation`의 `Compositing Type: QPainter`, 로그의
 > `EGL_EXT_platform_base is not supported` / `Could not initialize egl`로

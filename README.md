@@ -38,9 +38,12 @@
 - SDB 패키지명 인젝션으로 `sdk` 셸, `/dev/ntkgpu` cred 패치로 **root**, dropbear로 **SSH 2222**
 - 네이티브 Sway 1.10.1 / wlroots 0.18.2가 M5 패널에 **직접 스캔아웃** (미러·캡처 루프 없음)
 - KDE Plasma 6.3.6 데스크톱(KWin 6.3.6 + plasmashell)이 패널에 **OpenGL(Mali-G51) 전체화면**으로 표시 (2026-10-23)
-- **2026-10-24: relay 없이 KWin이 `/dev/dri/card0`를 직접 잡음** — 단, KWin은
-  **QPainter 폴백**이었고 OpenGL은 아직 아님. QPainter는 금지라 11:02에 중단.
-  (`docs/10-KDE-Direct-DRM.md`)
+- **2026-10-24 11:02 상태:** direct DRM KWin은 QPainter 폴백이어서 중단했다
+  (당시 상태는 `docs/10-KDE-Direct-DRM.md`에 기록).
+- **2026-10-24 20:42 현재 세션:** direct KWin OpenGL ES 2.0 / ARM Mali-G51이
+  활성이다. 1920×1080 SHM 전체 화면 표면에서 moving bar 600/600번 표시됐고,
+  59.90fps / missed_vblanks=0이었다. 막대만 damage하므로 전체 화면 전체 픽셀 GPU
+  부하는 아직 미측정이다. [진행 메모](case-studies/kde-direct-drm/notes/CHECKPOINT_2026-10-24_CLOCKFIX.md)
 - **2026-10-24 10:50 direct 재부팅 재현은 QPainter 상태였음** — OpenGL 성공 아님.
 - 1920x1080@60, `WLR_RENDERER=pixman`, legacy DRM
 - foot(왼쪽) + KCalc(오른쪽) 동시 표시, 라이브 갱신 확인
@@ -55,7 +58,7 @@
 - 재부팅하면 벤더가 master를 다시 잡음 → 패치 자동화 필요
 - atomic/page flip 이벤트의 `crtc_id=0` 문제를 shim으로 우회 중 (wlroots 0.18 한계)
 - SoC 3D 가속 미검증 — 현재는 pixman(CPU) 렌더링
-- **KDE 60fps 미달** — 18.8 commit/s (relay 기준). direct 경로의 60fps는 미측정.
+- **전체 픽셀 GPU 1080p60 부하는 미확인.** direct KWin 전체 화면 SHM 표면의 표시 cadence는 59.90fps였고, 128×120 막대만 바뀌었다. relay의 18.8 commit/s는 별도의 과거 측정이다.
 - **direct 경로의 `/tmp` 자산은 `/opt/usr/a/m5kde/direct`에서 복원 필요** — 재부팅 재현 스크립트는 있음.
 
 ## 문서 지도

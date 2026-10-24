@@ -1,0 +1,4 @@
+resources connectors=1 crtcs=1
+connector id=36 type=7 connection=1 modes=1
+available connector=36 name=1920x1080 size=1920x1080 vrefresh=60 clock_khz=148 totals=2200x1125
+active crtc connector=20 name=1920x1080 size=1920x1080 vrefresh=60 clock_khz=148 totals=2200x1125
