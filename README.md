@@ -38,6 +38,8 @@
 - SDB 패키지명 인젝션으로 `sdk` 셸, `/dev/ntkgpu` cred 패치로 **root**, dropbear로 **SSH 2222**
 - 네이티브 Sway 1.10.1 / wlroots 0.18.2가 M5 패널에 **직접 스캔아웃** (미러·캡처 루프 없음)
 - KDE Plasma 6.3.6 데스크톱(KWin 6.3.6 + plasmashell)이 패널에 **OpenGL(Mali-G51) 전체화면**으로 표시 (2026-10-23)
+- **2026-10-24: relay 없이 KWin이 `/dev/dri/card0`를 직접 잡고 Plasma를 표시**
+  (`docs/10-KDE-Direct-DRM.md`, 초록 데스크톱 + 하단 패널)
 - 1920x1080@60, `WLR_RENDERER=pixman`, legacy DRM
 - foot(왼쪽) + KCalc(오른쪽) 동시 표시, 라이브 갱신 확인
 - 부팅 후 master를 되찾는 두 가지 경로 확보
@@ -67,7 +69,8 @@
 | [docs/06-복구.md](docs/06-복구.md) | 원복, CRTC wedge 탈출, 브릭 방지 |
 | [docs/07-한계와-다음.md](docs/07-한계와-다음.md) | 입력, 가속, 자동화 과제 |
 | [docs/08-KDE-Plasma.md](docs/08-KDE-Plasma.md) | KWin + Plasma 6, QPainter/wl_shm 경로 (역사 기록) |
-| [docs/09-KDE-OpenGL-전체화면.md](docs/09-KDE-OpenGL-전체화면.md) | **최신**: KWin OpenGL(Mali-G51) 전체화면, 4분할 원인·수정, 60fps 상태 |
+| [docs/09-KDE-OpenGL-전체화면.md](docs/09-KDE-OpenGL-전체화면.md) | relay 경유 KWin OpenGL 전체화면, 4분할 원인·수정, 60fps 상태 |
+| [docs/10-KDE-Direct-DRM.md](docs/10-KDE-Direct-DRM.md) | **최신**: relay 없이 KWin direct DRM + Plasma, debug 심볼 기반 우회 패치 |
 
 ## 사례: root-shell
 
@@ -90,6 +93,15 @@
 - `case-studies/native-sway/restore.c`, `reset.c` — 원복
 - `case-studies/native-sway/*.c` — 모드 조회, flip 테스트, 캡처 도구
 - `case-studies/native-sway/evidence-native-sway-1342.png` — 패널 실측 캡처
+
+## 사례: kde-direct-drm
+
+2026-10-24, relay 없이 KWin이 DRM을 직접 잡은 경로입니다.
+
+- `case-studies/kde-direct-drm/README.md` — 재현 절차, debug 심볼, 두 우회 패치
+- `case-studies/kde-direct-drm/scripts/apply_libkwin_patch.py`
+- `case-studies/kde-direct-drm/scripts/start_direct_kde.sh`
+- `case-studies/kde-direct-drm/evidence/m5-kwin-direct-2026-10-24.png`
 
 ## 사례: kde-plasma
 

@@ -1,6 +1,7 @@
 # 09 · KDE OpenGL 전체화면 (2026-10-23)
 
-`08-KDE-Plasma.md`의 QPainter 사례를 대체하는 최신 상태입니다.
+`08-KDE-Plasma.md`의 QPainter 사례를 대체하는 relay 경유 기록입니다.
+**2026-10-24 direct DRM 경로는 `10-KDE-Direct-DRM.md`를 보세요.**
 
 ## 요약
 
